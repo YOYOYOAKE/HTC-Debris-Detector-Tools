@@ -6,6 +6,7 @@
 | :--: | :--: |
 | devider.py | 将图像与标签划分为训练集和验证集|
 | labelme2yolo.py | 将 labelme 的 JSON 格式文件转换为 YOLO 实例分割任务的 txt 格式文件 | 
+| neg_sample_generater.py | 为负样本生成空白的 txt 标签文件 |
 
 ## divider.py 
 
@@ -44,3 +45,18 @@
 ```
 
 进入项目文件夹执行`python labelme2yolo.py`即可。
+
+## neg_sample_generater.py
+
+需要以下目录结构：
+
+```
+- 项目文件夹
+  - neg_sample_generater.py
+  - images [负样本图片文件夹]
+    - xxx.jpg
+    - ...
+  - labels [工具生成的 txt 文件夹（自动生成）]
+```
+
+进入项目文件夹执行`python neg_sample_generater.py`即可。
